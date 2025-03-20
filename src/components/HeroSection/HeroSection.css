@@ -1,0 +1,38 @@
+.hero-section {
+    width: 100%;
+    padding: 20px 0; /* Отступы сверху и снизу */
+  }
+  
+  .hero-container {
+    width: 1240px; /* Ширина контейнера */
+    height: 556px; /* Высота контейнера */
+    margin: 0 auto; /* Центрируем контейнер на странице */
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .hero-title {
+    font-size: 67px; /* Размер текста */
+    font-weight: 500; /* Medium */
+    font-style: italic; /* Italic */
+    color: #000000; /* Чёрный цвет */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 50px; /* Позиция сверху, чтобы заголовок был чуть ниже */
+    left: 0; /* Выравниваем по левому краю контейнера */
+  }
+  
+  .info-box {
+    width: 240px; /* Ширина элемента */
+    height: 51px; /* Высота элемента */
+    background-color: #ffc107; /* Жёлтый фон */
+    color: #000000; /* Чёрный текст */
+    font-size: 14px; /* Размер шрифта */
+    position: absolute; /* Абсолютное позиционирование внутри контейнера */
+    left: 500px; /* Позиция x=500 */
+    top: 0; /* Позиция y=0 */
+    display: flex;
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    border-radius: 5px; /* Скругление углов */
+    text-align: center; /* Текст выровнен по центру */
+  }

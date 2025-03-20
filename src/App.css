@@ -1,0 +1,8 @@
+.App {
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Минимальная высота на всю страницу */
+  background-image: url('./assets/Container.jpg'); /* Путь к изображению */
+  background-size: cover; /* Изображение растягивается, чтобы покрыть всю область */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Изображение не повторяется */
+}
