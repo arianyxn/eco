@@ -1,38 +1,155 @@
 .hero-section {
-    width: 100%;
-    padding: 20px 0; /* Отступы сверху и снизу */
-  }
-  
-  .hero-container {
-    width: 1240px; /* Ширина контейнера */
-    height: 556px; /* Высота контейнера */
-    margin: 0 auto; /* Центрируем контейнер на странице */
-    position: relative; /* Для позиционирования дочерних элементов */
-  }
-  
-  .hero-title {
-    font-size: 67px; /* Размер текста */
-    font-weight: 500; /* Medium */
-    font-style: italic; /* Italic */
-    color: #000000; /* Чёрный цвет */
-    margin: 0; /* Убираем стандартные отступы */
-    position: absolute;
-    top: 50px; /* Позиция сверху, чтобы заголовок был чуть ниже */
-    left: 0; /* Выравниваем по левому краю контейнера */
-  }
-  
-  .info-box {
-    width: 240px; /* Ширина элемента */
-    height: 51px; /* Высота элемента */
-    background-color: #ffc107; /* Жёлтый фон */
-    color: #000000; /* Чёрный текст */
-    font-size: 14px; /* Размер шрифта */
-    position: absolute; /* Абсолютное позиционирование внутри контейнера */
-    left: 500px; /* Позиция x=500 */
-    top: 0; /* Позиция y=0 */
-    display: flex;
-    align-items: center; /* Центрируем текст по вертикали */
-    justify-content: center; /* Центрируем текст по горизонтали */
-    border-radius: 5px; /* Скругление углов */
-    text-align: center; /* Текст выровнен по центру */
-  }
+  width: 100%;
+  padding: 20px 0; /* Отступы сверху и снизу */
+}
+
+.hero-container {
+  width: 1240px; /* Ширина контейнера */
+  height: 556px; /* Высота контейнера */
+  margin: 0 auto; /* Центрируем контейнер на странице */
+  position: relative; /* Для позиционирования дочерних элементов */
+}
+
+.hero-title {
+  font-size: 67px; /* Размер текста */
+  font-weight: 500; /* Medium */
+  font-style: italic; /* Italic */
+  color: #000000; /* Чёрный цвет */
+  margin: 0; /* Убираем стандартные отступы */
+  position: absolute;
+  top: 50px; /* Позиция сверху */
+  width: 880px; /* Ширина 880px */
+  height: 172px; /* Высота 172px */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Смещаем на половину ширины влево для точного центрирования */
+  text-align: center; /* Текст по центру */
+  line-height: 1; /* Уменьшаем межстрочный интервал */
+  display: flex; /* Используем flex для управления расстоянием */
+  flex-direction: column; /* Строки располагаются друг под другом */
+  justify-content: center; /* Центрируем содержимое по вертикали */
+  gap: 0; /* Убираем дополнительный отступ между строками */
+}
+
+.hero-subtitle {
+  font-size: 16px; /* Размер текста */
+  font-weight: 400; /* Regular */
+  color: #000000; /* Чёрный цвет */
+  margin: 0; /* Убираем стандартные отступы */
+  position: absolute;
+  top: 250px; /* Позиция */
+  max-width: 600px; /* Ограничиваем ширину для читаемости */
+  line-height: 1.5; /* Улучшаем читаемость текста */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Смещаем на половину ширины влево для точного центрирования */
+  text-align: center; /* Текст по центру */
+}
+
+.hero-buttons {
+  position: absolute;
+  top: 350px; /* Позиция ниже подзаголовка */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Смещаем на половину ширины влево для точного центрирования */
+  display: flex;
+  gap: 20px; /* Расстояние между кнопками */
+}
+
+.btn {
+  display: flex;
+  align-items: center; /* Центрируем содержимое по вертикали */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  border: none;
+  border-radius: 5px; /* Скругление углов */
+  cursor: pointer;
+  font-family: 'Inter', sans-serif; /* Шрифт Inter */
+  font-weight: 500; /* Medium */
+  font-size: 16px; /* Размер текста */
+}
+
+.btn-primary {
+  width: 198px; /* Ширина кнопки */
+  height: 52px; /* Высота кнопки */
+  background-color: #eaf0dd; /* Цвет фона */
+  color: #000000; /* Чёрный текст */
+}
+
+.btn-secondary {
+  width: 255px; /* Ширина кнопки */
+  height: 52px; /* Высота кнопки */
+  background-color: #000000; /* Чёрный фон */
+  color: #ffffff; /* Белый текст */
+}
+
+.btn-icon {
+  width: 25px; /* Размер изображения */
+  height: 25px;
+  margin-right: 10px; /* Отступ справа от изображения */
+}
+
+.quote-frame {
+  width: 660px; /* Ширина фрейма */
+  height: 65px; /* Высота фрейма */
+  position: absolute;
+  top: 430px; /* Позиция ниже кнопок */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Смещаем на половину ширины влево для точного центрирования */
+  display: flex;
+  flex-direction: column; /* Тексты располагаются друг под другом */
+  justify-content: center; /* Центрируем тексты по вертикали */
+}
+
+.quote-text {
+  font-size: 16px; /* Размер текста */
+  font-style: italic; /* Italic */
+  color: rgba(0, 0, 0, 0.6); /* Чёрный с прозрачностью 60% */
+  margin: 0; /* Убираем стандартные отступы */
+  text-align: center; /* Текст по центру */
+}
+
+.quote-text-1 {
+  width: 298px; /* Размер текста */
+  height: 28px; /* Высота текста */
+  line-height: 28px; /* Выравниваем текст по высоте */
+  margin: 0 auto; /* Центрируем текст внутри фрейма */
+}
+
+.quote-text-2 {
+  width: 450px; /* Размер текста */
+  height: 28px; /* Высота текста */
+  line-height: 28px; /* Выравниваем текст по высоте */
+  margin: 0 auto; /* Центрируем текст внутри фрейма */
+}
+
+.info-box {
+  width: 240px; /* Ширина элемента */
+  height: 51px; /* Высота элемента */
+  background-color: #f0ffd1; /* Обновлённый цвет */
+  color: #000000; /* Чёрный текст */
+  font-size: 14px; /* Размер шрифта */
+  position: absolute; /* Абсолютное позиционирование внутри контейнера */
+  left: 500px; /* Позиция x=500 */
+  top: 0; /* Позиция y=0 */
+  display: flex;
+  align-items: center; /* Центрируем текст по вертикали */
+  justify-content: center; /* Центрируем текст по горизонтали */
+  border-radius: 18px; /* Скругление углов 18px */
+  text-align: center; /* Текст выровнен по центру */
+}
+
+/* Стили для изображений */
+.eco-image {
+  position: absolute;
+}
+
+.eco-image-1 {
+  width: 251px; /* Размер изображения */
+  height: 232px;
+  left: -26px; /* Позиция x=-26 */
+  top: 336px; /* Позиция y=336 */
+}
+
+.eco-image-2 {
+  width: 120px; /* Размер изображения */
+  height: 150px;
+  left: 1099px; /* Позиция x=1099 */
+  top: 239px; /* Позиция y=239 */
+}

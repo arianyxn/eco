@@ -5,4 +5,5 @@
   background-size: cover; /* Изображение растягивается, чтобы покрыть всю область */
   background-position: center; /* Центрируем изображение */
   background-repeat: no-repeat; /* Изображение не повторяется */
+  padding-top: 92px; /* Отступ сверху, равный высоте шапки (72px + 10px + 10px) */
 }

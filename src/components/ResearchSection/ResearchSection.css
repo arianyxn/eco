@@ -1,0 +1,117 @@
+.research-section {
+    width: 100%;
+    height: 1150px; /* Высота секции */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 96px 0; /* Отступы сверху и снизу по 96px */
+    box-sizing: border-box; /* Учитываем padding в общей высоте */
+  }
+  
+  .research-container {
+    width: 1080px; /* Ширина контейнера */
+    height: 958px; /* Высота контейнера: 1150px - 192px */
+    margin: 0 auto; /* Центрируем контейнер */
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .title-wrapper {
+    display: flex; /* Flex для выравнивания звезды и текста */
+    align-items: center; /* Центрируем по вертикали */
+    position: absolute;
+    top: 0; /* Привязываем к верхнему краю контейнера */
+    left: 0; /* Привязываем к левому краю контейнера */
+  }
+  
+  .big-star {
+    width: 24px; /* Размер изображения */
+    height: 24px;
+    margin-right: 10px; /* Отступ справа от звезды до текста */
+  }
+  
+  .research-title {
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+  }
+  
+  .research-title-main {
+    font-size: 39px; /* Размер шрифта, как в MissionSection */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 43px; /* 24px (высота title-wrapper) + 19px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 720px; /* Ширина заголовка, как в MissionSection */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .research-description {
+    font-size: 16px; /* Размер шрифта, как в MissionSection */
+    font-weight: 400; /* Regular */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 108px; /* 91px (нижний край заголовка) + 17px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 579px; /* Ширина текста, как указано */
+    height: 68px; /* Высота текста, как указано */
+    line-height: 1.5; /* Межстрочный интервал, как в MissionSection */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .research-cards-container {
+    position: absolute;
+    top: 222px; /* 176px (занятая высота) + 46px (отступ) */
+    left: 0;
+    width: 1080px; /* Ширина контейнера */
+    height: 736px; /* Оставшаяся высота */
+    display: grid;
+    grid-template-columns: repeat(2, 535px); /* Две колонки по 535px */
+    grid-template-rows: repeat(2, 363px); /* Два ряда по 363px */
+    gap: 10px; /* Уменьшаем расстояние между карточками до 10px */
+  }
+  
+  .research-card {
+    background-color: transparent; /* Прозрачный фон */
+    border-radius: 12px; /* Закругление углов */
+    overflow: hidden; /* Скрываем содержимое, выходящее за пределы */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .research-card-image {
+    width: 100%;
+    height: 200px; /* Высота изображения */
+    object-fit: cover; /* Изображение заполняет область */
+  }
+  
+  .research-card-content {
+    padding: 16px;
+    flex-grow: 1; /* Контент занимает оставшееся пространство */
+  }
+  
+  .research-card-category {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666666; /* Серый цвет */
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .research-card-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0 0 8px 0;
+  }
+  
+  .research-card-description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    margin: 0;
+    line-height: 1.4;
+  }

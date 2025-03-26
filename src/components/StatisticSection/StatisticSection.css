@@ -1,0 +1,274 @@
+.statistic-section {
+    width: 100%;
+    height: 1776px; /* Высота секции */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 96px 0; /* Отступы сверху и снизу по 96px */
+    box-sizing: border-box; /* Учитываем padding в общей высоте */
+  }
+  
+  .statistic-container {
+    width: 1080px; /* Ширина контейнера */
+    height: 1584px; /* Высота контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .sub-container {
+    width: 1080px; /* Ширина всех контейнеров */
+  }
+  
+  .sub-container-1 {
+    height: 429px; /* Высота первого контейнера */
+    display: flex; /* Для разделения на две части */
+  }
+  
+  .sub-container-left {
+    width: 574px; /* Ширина левой части */
+    height: 429px; /* Высота левой части */
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .sub-container-right {
+    width: 506px; /* Ширина правой части (1080px - 574px) */
+    height: 429px; /* Высота правой части */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-container-2 {
+    height: 579px; /* Высота второго контейнера */
+    margin-top: 44px; /* Отступ сверху */
+    display: flex; /* Для разделения на две части */
+  }
+  
+  .sub-container-left-2 {
+    width: 506px; /* Ширина левой части (1080px - 574px) */
+    height: 579px; /* Высота левой части */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-container-right-2 {
+    width: 574px; /* Ширина правой части */
+    height: 459px; /* Высота правой части */
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .sub-container-3 {
+    height: 488px; /* Высота третьего контейнера */
+    margin-top: 44px; /* Отступ сверху */
+    display: flex; /* Для разделения на две части */
+  }
+  
+  .sub-container-left-3 {
+    width: 574px; /* Ширина левой части */
+    height: 488px; /* Высота левой части */
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .sub-container-right-3 {
+    width: 506px; /* Ширина правой части (1080px - 574px) */
+    height: 488px; /* Высота правой части */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .statistic-image {
+    max-width: 100%; /* Изображение не превышает ширину контейнера */
+    max-height: 100%; /* Изображение не превышает высоту контейнера */
+    object-fit: contain; /* Сохраняем пропорции изображения */
+  }
+  
+  .title-wrapper {
+    display: flex; /* Flex для выравнивания изображения и текста */
+    align-items: center; /* Центрируем по вертикали */
+    position: absolute;
+    top: 0; /* Привязываем к верхнему краю контейнера */
+    left: 0; /* Привязываем к левому краю контейнера */
+  }
+  
+  .sub-container-right-2 .title-wrapper {
+    left: 100px; /* Смещаем title-wrapper на 100px влево во втором контейнере */
+  }
+  
+  .sub-container-left-3 .title-wrapper {
+    top: 120px; /* Смещаем title-wrapper на 120px вниз в третьем контейнере */
+  }
+  
+  .cub-icon {
+    width: 24px; /* Размер изображения, как у clever-icon */
+    height: 24px;
+    margin-right: 10px; /* Отступ справа от изображения до текста */
+  }
+  
+  .statistics-title {
+    font-size: 14px; /* Размер шрифта, как у problems-title */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+  }
+  
+  .statistic-title {
+    font-size: 39px; /* Размер шрифта, как в ResearchSection */
+    font-weight: 500; /* Medium, как в ResearchSection */
+    color: #000000; /* Чёрный цвет, как в ResearchSection */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 40px; /* 24px (высота title-wrapper) + 16px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 474px; /* Указанная ширина */
+    height: 105px; /* Указанная высота */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .statistic-points {
+    list-style-type: disc; /* Маркеры в виде точек */
+    padding-left: 20px; /* Отступ для маркеров */
+    margin: 0;
+    position: absolute;
+    top: 161px; /* 40px (top заголовка) + 105px (высота заголовка) + 16px (отступ) */
+    left: 0;
+    width: 474px; /* Ширина, как у заголовка */
+  }
+  
+  .statistic-points li {
+    font-size: 16px; /* Размер шрифта, как в ProblemSection */
+    font-weight: 400; /* Regular, как в ProblemSection */
+    color: #333333; /* Тёмно-серый цвет, как в ProblemSection */
+    margin-bottom: 10px; /* Отступ между подпунктами */
+    line-height: 1.4; /* Межстрочный интервал, как в ProblemSection */
+  }
+  
+  .statistic-problem {
+    font-size: 16px; /* Размер шрифта, как в ProblemSection */
+    font-weight: 400; /* Regular, как в ProblemSection */
+    color: #000000; /* Чёрный цвет текста, как в ProblemSection */
+    margin: 16px 0; /* Отступы сверху и снизу по 16px */
+    position: absolute;
+    top: 265px; /* 161px (top списка) + 88px (высота списка) + 16px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 474px; /* Ширина, как у заголовка */
+    line-height: 1.5; /* Межстрочный интервал, как в ProblemSection */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .statistic-title-2 {
+    font-size: 39px; /* Размер шрифта, как в ResearchSection */
+    font-weight: 500; /* Medium, как в ResearchSection */
+    color: #000000; /* Чёрный цвет, как в ResearchSection */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 40px; /* 24px (высота title-wrapper) + 16px (отступ) */
+    left: 100px; /* Смещаем на 100px влево */
+    width: 474px; /* Указанная ширина */
+    height: 159px; /* Указанная высота */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .statistic-points-2 {
+    list-style-type: disc; /* Маркеры в виде точек */
+    padding-left: 20px; /* Отступ для маркеров */
+    margin: 0;
+    position: absolute;
+    top: 215px; /* 40px (top заголовка) + 159px (высота заголовка) + 16px (отступ) */
+    left: 100px; /* Смещаем на 100px влево */
+    width: 474px; /* Ширина, как у заголовка */
+  }
+  
+  .statistic-points-2 li {
+    font-size: 16px; /* Размер шрифта, как в ProblemSection */
+    font-weight: 400; /* Regular, как в ProblemSection */
+    color: #333333; /* Тёмно-серый цвет, как в ProblemSection */
+    margin-bottom: 10px; /* Отступ между подпунктами */
+    line-height: 1.4; /* Межстрочный интервал, как в ProblemSection */
+  }
+  
+  .statistic-problem-2 {
+    font-size: 16px; /* Размер шрифта, как в ProblemSection */
+    font-weight: 400; /* Regular, как в ProblemSection */
+    color: #000000; /* Чёрный цвет текста, как в ProblemSection */
+    margin: 16px 0; /* Отступы сверху и снизу по 16px */
+    position: absolute;
+    top: 297px; /* 215px (top списка) + 66px (высота списка) + 16px (отступ) */
+    left: 100px; /* Смещаем на 100px влево */
+    width: 474px; /* Ширина, как у заголовка */
+    line-height: 1.5; /* Межстрочный интервал, как в ProblemSection */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .statistic-title-3 {
+    font-size: 39px; /* Размер шрифта, как в ResearchSection */
+    font-weight: 500; /* Medium, как в ResearchSection */
+    color: #000000; /* Чёрный цвет, как в ResearchSection */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 160px; /* 120px (top title-wrapper) + 24px (высота title-wrapper) + 16px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 474px; /* Указанная ширина */
+    height: 105px; /* Указанная высота */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .statistic-points-3 {
+    list-style-type: disc; /* Маркеры в виде точек */
+    padding-left: 20px; /* Отступ для маркеров */
+    margin: 0;
+    position: absolute;
+    top: 281px; /* 160px (top заголовка) + 105px (высота заголовка) + 16px (отступ) */
+    left: 0;
+    width: 474px; /* Ширина, как у заголовка */
+  }
+  
+  .statistic-points-3 li {
+    font-size: 16px; /* Размер шрифта, как в ProblemSection */
+    font-weight: 400; /* Regular, как в ProblemSection */
+    color: #333333; /* Тёмно-серый цвет, как в ProblemSection */
+    margin-bottom: 10px; /* Отступ между подпунктами */
+    line-height: 1.4; /* Межстрочный интервал, как в ProblemSection */
+  }
+  
+  .statistic-problem-3 {
+    font-size: 16px; /* Размер шрифта, как в ProblemSection */
+    font-weight: 400; /* Regular, как в ProblemSection */
+    color: #000000; /* Чёрный цвет текста, как в ProblemSection */
+    margin: 16px 0; /* Отступы сверху и снизу по 16px */
+    position: absolute;
+    top: 363px; /* 281px (top списка) + 66px (высота списка) + 16px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 474px; /* Ширина, как у заголовка */
+    line-height: 1.5; /* Межстрочный интервал, как в ProblemSection */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .sub-container-right-2 .more-info {
+    position: absolute;
+    bottom: 20px; /* Отступ от нижнего края правой части */
+    right: 120px; /* Отступ от правого края с учётом смещения (20px + 100px) */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666; /* Сероватый, неяркий цвет, как в ProblemSection */
+  }
+  
+  .sub-container-left .more-info,
+  .sub-container-left-3 .more-info {
+    position: absolute;
+    bottom: 20px; /* Отступ от нижнего края левой части */
+    right: 20px; /* Отступ от правого края левой части */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666; /* Сероватый, неяркий цвет, как в ProblemSection */
+  }
+  
+  .more-info .arrow {
+    margin-left: 5px;
+    font-size: 16px;
+  }

@@ -1,0 +1,168 @@
+.problem-section {
+    width: 100%;
+    height: 1138px; /* Высота секции: 946px (контейнер) + 96px (отступ сверху) + 96px (отступ снизу) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 96px 0; /* Отступы сверху и снизу по 96px */
+    box-sizing: border-box; /* Учитываем padding в общей высоте */
+  }
+  
+  .problem-container {
+    width: 1080px; /* Ширина контейнера */
+    height: 946px; /* Высота контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .title-wrapper {
+    display: flex; /* Flex для выравнивания изображения и текста */
+    align-items: center; /* Центрируем по вертикали */
+    position: absolute;
+    top: 0; /* Привязываем к верхнему краю контейнера */
+    left: 0; /* Привязываем к левому краю контейнера */
+  }
+  
+  .clever-icon {
+    width: 24px; /* Размер изображения, как у big-star */
+    height: 24px;
+    margin-right: 10px; /* Отступ справа от изображения до текста */
+  }
+  
+  .problems-title {
+    font-size: 14px; /* Размер шрифта, как у research-title */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+  }
+  
+  .problem-title {
+    font-size: 39px; /* Размер шрифта, как в ResearchSection */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 43px; /* 24px (высота title-wrapper) + 19px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 720px; /* Ширина заголовка, как в ResearchSection */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .problem-description {
+    font-size: 16px; /* Размер шрифта, как в ResearchSection */
+    font-weight: 400; /* Regular */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 108px; /* 91px (нижний край заголовка) + 17px (отступ) */
+    left: 0; /* Привязываем к левому краю */
+    width: 579px; /* Ширина текста, как в ResearchSection */
+    height: 68px; /* Высота текста, как в ResearchSection */
+    line-height: 1.5; /* Межстрочный интервал, как в ResearchSection */
+    text-align: left; /* Текст выравнивается по левому краю */
+  }
+  
+  .problems-container {
+    position: absolute;
+    top: 221px; /* 176px (занятая высота) + 45px (отступ) */
+    left: 0;
+    width: 1080px; /* Ширина контейнера */
+    height: 725px; /* Оставшаяся высота */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+  }
+  
+  .problem-card-wrapper {
+    width: 100%;
+    height: 567px; /* Высота карточки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .problem-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон для читаемости */
+    border-radius: 12px; /* Закругление углов */
+    width: 605px; /* Ширина карточки */
+    height: 567px; /* Высота карточки */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Выравниваем содержимое сверху */
+  }
+  
+  .problem-card-inner {
+    padding: 40px 20px 20px 20px; /* Увеличиваем отступ сверху до 40px */
+    flex-grow: 1; /* Занимает всё доступное пространство */
+    position: relative; /* Для позиционирования .more-info */
+  }
+  
+  .problem-card-title {
+    font-size: 24px; /* Размер шрифта (уже увеличен) */
+    font-weight: 500; /* Medium, как в ResearchSection */
+    color: #000000; /* Чёрный цвет, как в ResearchSection */
+    margin: 0 0 30px 0; /* Увеличиваем отступ снизу до 30px */
+  }
+  
+  .problem-card-points {
+    list-style-type: disc; /* Маркеры в виде точек */
+    padding-left: 20px; /* Отступ для маркеров */
+    margin: 0;
+  }
+  
+  .problem-card-points li {
+    font-size: 16px; /* Размер шрифта (уже увеличен) */
+    font-weight: 400; /* Regular, как в ResearchSection */
+    color: #333333; /* Тёмно-серый цвет, как в ResearchSection */
+    margin-bottom: 10px; /* Отступ между подпунктами */
+    line-height: 1.4; /* Межстрочный интервал, как в ResearchSection */
+  }
+  
+  .location-highlight {
+    font-weight: 700; /* Жирный шрифт */
+    color: #2E5A2E; /* Тёмно-зелёный цвет */
+  }
+  
+  .more-info {
+    position: absolute;
+    bottom: 20px; /* Отступ от нижнего края карточки */
+    right: 20px; /* Отступ от правого края карточки */
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666; /* Сероватый, неяркий цвет */
+  }
+  
+  .more-info .arrow {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  
+  .arrow-button {
+    background-color: #EAF0DD; /* Цвет кнопок */
+    color: #000000; /* Чёрный цвет текста для контраста */
+    border: none;
+    border-radius: 50%; /* Круглая форма */
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .arrow-button:hover {
+    background-color: #D5E0C8; /* Чуть темнее при наведении */
+  }
+  
+  .arrow-up {
+    margin-bottom: 20px; /* Отступ снизу */
+  }
+  
+  .arrow-down {
+    margin-top: 20px; /* Отступ сверху */
+  }

@@ -1,0 +1,165 @@
+.conclusion-section {
+    width: 100%;
+    height: 692px; /* Высота секции */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex; /* Для центрирования контейнера */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .conclusion-main-container {
+    width: 1080px; /* Ширина контейнера */
+    height: 500px; /* Высота контейнера */
+    display: flex; /* Для расположения подконтейнеров в ряд */
+    gap: 44px; /* Отступ 44px между подконтейнерами */
+  }
+  
+  .conclusion-subcontainer {
+    position: relative; /* Для позиционирования дочерних элементов */
+  }
+  
+  .conclusion-subcontainer-1 {
+    width: 518px; /* Ширина первого подконтейнера */
+    height: 325px; /* Высота первого подконтейнера */
+  }
+  
+  .conclusion-subcontainer-2 {
+    width: 518px; /* Ширина второго подконтейнера */
+    height: 500px; /* Высота второго подконтейнера */
+    overflow: hidden; /* Скрываем элементы, выходящие за пределы */
+  }
+  
+  .conclusion-header-wrapper {
+    display: flex; /* Flex для выравнивания иконки и текста */
+    align-items: center; /* Центрируем по вертикали */
+    position: absolute;
+    top: 0; /* Привязываем к верхнему краю подконтейнера */
+    left: 0; /* Привязываем к левому краю подконтейнера */
+  }
+  
+  .conclusion-star-icon {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+    margin-right: 10px; /* Отступ справа от иконки до текста */
+  }
+  
+  .conclusion-header-title {
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет текста */
+    margin: 0; /* Убираем стандартные отступы */
+  }
+  
+  .conclusion-subcontainer-1-title {
+    font-size: 40px; /* Размер шрифта */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 40px; /* 24px (высота иконки с текстом) + 16px (отступ) */
+    left: 0;
+    line-height: 1.2; /* Межстрочный интервал для читаемости */
+  }
+  
+  .conclusion-subcontainer-1-subtitle {
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 400; /* Regular */
+    color: #000000; /* Чёрный цвет */
+    margin: 0; /* Убираем стандартные отступы */
+    position: absolute;
+    top: 132px; /* 40px (top заголовка) + 76px (высота заголовка) + 16px (отступ) */
+    left: 0;
+    line-height: 1.5; /* Межстрочный интервал для читаемости */
+  }
+  
+  .conclusion-subcontainer-1-button {
+    position: absolute;
+    top: 228px; /* 132px (top подзаголовка) + 80px (высота подзаголовка) + 16px (отступ) */
+    left: 0;
+    padding: 12px 24px; /* Отступы внутри кнопки */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 500; /* Medium */
+    color: #ffffff; /* Белый цвет текста */
+    background-color: #000000; /* Чёрный фон */
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer;
+    display: flex; /* Для выравнивания текста и стрелки */
+    align-items: center; /* Центрируем по вертикали */
+    gap: 8px; /* Отступ между текстом и стрелкой */
+    transition: background-color 0.3s ease; /* Плавный переход при наведении */
+  }
+  
+  .conclusion-subcontainer-1-button:hover {
+    background-color: #333333; /* Темнее при наведении */
+  }
+  
+  .conclusion-button-arrow {
+    font-size: 16px; /* Размер стрелки */
+  }
+  
+  .conclusion-benefits-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* Добавляем градиентную маску для эффекта исчезновения */
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%, /* Прозрачный верх */
+      black 10%, /* Полная видимость */
+      black 90%, /* Полная видимость */
+      transparent 100% /* Прозрачный низ */
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+  
+  .conclusion-benefits-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступ 20px между элементами */
+    animation: conclusion-scroll-up 15s linear infinite; /* Анимация движения вверх */
+  }
+  
+  .conclusion-benefit-item {
+    display: flex;
+    align-items: center; /* Центрируем текст и иконку по вертикали */
+    justify-content: space-between; /* Текст слева, иконка справа */
+    width: 501px; /* Ширина элемента */
+    height: 109px; /* Высота элемента */
+    background-color: #ffffff; /* Белый фон */
+    border-radius: 10px; /* Округлённые края */
+    padding: 0 20px; /* Отступы слева и справа внутри элемента */
+  }
+  
+  .conclusion-benefit-text {
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 500; /* Medium */
+    color: #000000; /* Чёрный цвет */
+  }
+  
+  .conclusion-benefit-icon {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+  }
+  
+  /* Анимация движения вверх */
+  @keyframes conclusion-scroll-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%); /* Сдвигаем на половину высоты списка */
+    }
+  }

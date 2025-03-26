@@ -1,0 +1,187 @@
+.mission-section {
+  width: 100%;
+  height: 956px; /* Фиксированная высота секции */
+  padding: 96px 0; /* Отступы сверху и снизу по 96px */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mission-main-container {
+  width: 1080px; /* Ширина контейнера */
+  height: 764px; /* Высота контейнера */
+  max-width: 1240px; /* Максимальная ширина */
+  margin: 0 auto; /* Центрируем контейнер */
+  position: relative;
+}
+
+.mission-text-container {
+  width: 1080px; /* Ширина вложенного контейнера */
+  height: 209px; /* Высота вложенного контейнера */
+  position: absolute;
+  top: 0; /* Привязываем к верху контейнера */
+  left: 0; /* Привязываем к левому краю */
+  display: flex; /* Используем flex для управления расположением */
+  flex-direction: column; /* Элементы друг под другом */
+}
+
+.mission-title-wrapper {
+  display: flex; /* Flex для выравнивания звезды и текста */
+  align-items: center; /* Центрируем по вертикали */
+  margin-left: 20px; /* Отступ слева */
+  margin-top: 0; /* Убираем отступ сверху */
+}
+
+.mission-star-icon {
+  width: 24px; /* Размер изображения */
+  height: 24px;
+  margin-right: 10px; /* Отступ справа от звезды до текста */
+}
+
+.mission-header-title {
+  font-size: 14px; /* Размер шрифта */
+  font-weight: 500; /* Medium */
+  color: #000000; /* Чёрный цвет текста */
+  margin: 0; /* Убираем стандартные отступы */
+}
+
+.mission-main-subtitle {
+  width: 720px; /* Ширина заголовка */
+  height: 105px; /* Высота заголовка */
+  font-size: 39px; /* Размер шрифта */
+  font-weight: 500; /* Medium */
+  color: #000000; /* Чёрный цвет текста */
+  margin: 16px 0 16px 20px; /* Отступы: 16px сверху, 16px снизу, 20px слева */
+  text-align: left; /* Текст выравнивается по левому краю */
+  box-sizing: border-box; /* Учитываем размеры */
+}
+
+.mission-main-description {
+  width: 640px; /* Ширина текста */
+  height: 48px; /* Высота текста */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: 400; /* Regular */
+  color: #000000; /* Чёрный цвет текста */
+  margin: 0 0 0 20px; /* Отступ слева 20px, без отступов сверху и снизу */
+  line-height: 1.5; /* Улучшаем читаемость */
+}
+
+.mission-cards-container {
+  width: 1080px; /* Ширина контейнера с карточками */
+  height: 307px; /* Высота контейнера с карточками */
+  position: absolute;
+  top: 253px; /* 209px (text-container) + 44px (отступ) */
+  left: 0; /* Привязываем к левому краю */
+  display: flex; /* Используем flex для колонок */
+  justify-content: space-between; /* Равномерно распределяем карточки */
+  background-color: #ffffff; /* Белый фон для контейнера */
+}
+
+.mission-card {
+  width: 340px; /* Примерная ширина каждой карточки (1080px / 3 - отступы) */
+  height: 307px; /* Высота карточки */
+  background-color: #ffffff; /* Белый фон */
+  padding: 0 20px; /* Убираем padding сверху и снизу, оставляем по бокам */
+  display: flex;
+  flex-direction: column; /* Элементы внутри карточки друг под другом */
+  align-items: flex-start; /* Выравниваем по левому краю */
+  box-sizing: border-box; /* Учитываем padding в размерах */
+}
+
+.mission-card-icon {
+  width: 53px; /* Размер иконки */
+  height: 53px;
+  margin-top: 36px; /* Отступ сверху */
+  margin-bottom: 24px; /* Отступ снизу */
+}
+
+/* Общие стили для заголовков карточек */
+.mission-card-title {
+  font-size: 21px; /* Размер шрифта заголовка */
+  font-weight: 500; /* Medium */
+  color: #000000; /* Чёрный цвет текста */
+  margin: 0 0 16px 0; /* Отступ снизу 16px */
+}
+
+/* Общие стили для текстов карточек */
+.mission-card-text {
+  font-size: 14px; /* Размер шрифта текста */
+  font-weight: 400; /* Regular */
+  color: #000000; /* Чёрный цвет текста */
+  line-height: 1.5; /* Улучшаем читаемость */
+  margin: 0 0 43px 0; /* Отступ снизу 43px */
+}
+
+/* Индивидуальные размеры для заголовков */
+.mission-card:nth-child(1) .mission-card-title,
+.mission-card:nth-child(2) .mission-card-title {
+  width: 240px; /* Ширина заголовка для 1-й и 2-й карточек */
+  height: auto; /* Убираем фиксированную высоту */
+}
+
+.mission-card:nth-child(3) .mission-card-title {
+  width: 240px; /* Ширина заголовка для 3-й карточки */
+  height: auto; /* Убираем фиксированную высоту */
+}
+
+/* Индивидуальные размеры для текстов */
+.mission-card:nth-child(1) .mission-card-text {
+  width: 303px; /* Ширина текста для 1-й карточки */
+  height: auto; /* Убираем фиксированную высоту */
+}
+
+.mission-card:nth-child(2) .mission-card-text {
+  width: 304px; /* Ширина текста для 2-й карточки */
+  height: auto; /* Убираем фиксированную высоту */
+}
+
+.mission-card:nth-child(3) .mission-card-text {
+  width: 303px; /* Ширина текста для 3-й карточки */
+  height: auto; /* Убираем фиксированную высоту */
+}
+
+.mission-animation-container {
+  width: 1080px; /* Ширина контейнера */
+  height: 160px; /* Высота контейнера */
+  position: absolute;
+  top: 604px; /* 764px - 160px, чтобы быть в самом низу */
+  left: 0; /* Привязываем к левому краю */
+  overflow: hidden; /* Скрываем текст, который выходит за пределы */
+  /* Добавляем градиентную маску для эффекта затухания */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.mission-ticker-top,
+.mission-ticker-bottom {
+  width: 100%; /* Ширина контейнера */
+  height: 80px; /* Высота каждого тикера */
+  display: flex; /* Используем flex для горизонтального расположения текста */
+  align-items: center; /* Центрируем текст по вертикали */
+  white-space: nowrap; /* Текст в одну строку */
+  background-color: transparent; /* Прозрачный фон */
+}
+
+.mission-ticker-content {
+  display: flex; /* Для горизонтального расположения текста */
+}
+
+.mission-ticker-top .mission-ticker-content span,
+.mission-ticker-bottom .mission-ticker-content span {
+  font-size: 16px; /* Размер шрифта */
+  font-weight: 500; /* Medium */
+  color: #000000; /* Чёрный цвет текста */
+  margin-right: 40px; /* Отступ между словами */
+}
