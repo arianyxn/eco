@@ -1,11 +1,13 @@
 import React from 'react';
 import './FooterSection.css';
-import ecocycleLogo from '../../assets/Ecocycle.png'; // Логотип
-import instagramIcon from '../../assets/instagram-icon.png'; // Иконка Instagram
-import tiktokIcon from '../../assets/tiktok-icon.png'; // Иконка TikTok
-import linkedinIcon from '../../assets/linkedin-icon.png'; // Иконка LinkedIn
-import youtubeIcon from '../../assets/youtube-icon.png'; // Иконка YouTube
-import twitterIcon from '../../assets/twitter-icon.png'; // Иконка Twitter
+import scrollToSection from '../../utils/scrollToSection'; 
+
+import ecocycleLogo from '../../assets/Ecocycle.png'; 
+import instagramIcon from '../../assets/instagram-icon.png'; 
+import tiktokIcon from '../../assets/tiktok-icon.png'; 
+import linkedinIcon from '../../assets/linkedin-icon.png';
+import youtubeIcon from '../../assets/youtube-icon.png';
+import twitterIcon from '../../assets/twitter-icon.png'; 
 
 const FooterSection = () => {
   return (
@@ -13,7 +15,7 @@ const FooterSection = () => {
       <div className="footer-main-container">
         <div className="footer-top">
           <div className="footer-logo">
-            <img src={ecocycleLogo} alt="Ecocycle Logo" className="footer-logo-image" />
+            <img src={ecocycleLogo} alt="Ecocycle Logo" className="footer-logo-image" onClick={() => scrollToSection('hero')}/>
           </div>
           <div className="footer-socials">
             <a href="https://instagram.com" className="footer-social-link">
@@ -34,10 +36,9 @@ const FooterSection = () => {
           </div>
         </div>
         <div className="footer-links">
-          <a href="#statistics" className="footer-link">Статистики</a>
-          <a href="#research" className="footer-link">Исследования</a>
-          <a href="#comments" className="footer-link">Комментарии</a>
-          <a href="#info" className="footer-link">Актуальная информация</a>
+          <p>Contacts:</p>
+          <p>+7 777 455 3456</p>
+          <p>ecocycle@globalinformation.com</p>
         </div>
         <div className="footer-bottom">
           <span className="footer-copyright">© 2025 Все права защищены</span>

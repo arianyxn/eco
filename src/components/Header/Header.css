@@ -1,16 +1,16 @@
 .header {
-  background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+  background-color: rgba(255, 255, 255, 0.9); 
   width: 100%;
   padding: 10px 0;
-  position: fixed; /* Фиксируем шапку вверху */
-  top: 0; /* Привязываем к верхнему краю */
-  left: 0; /* Привязываем к левому краю */
-  z-index: 1000; /* Устанавливаем высокий z-index, чтобы шапка была поверх других элементов */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000; 
 }
 
 .header-container {
-  width: 1100px; /* Ширина контейнера */
-  height: 72px; /* Высота контейнера */
+  width: 1100px; 
+  height: 72px; 
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -18,10 +18,10 @@
 }
 
 .logo {
-  width: 100px; /* Размер логотипа (изменено тобой) */
-  height: 70px; /* Размер логотипа (изменено тобой) */
-  margin-left: 39px; /* Отступ слева */
-  margin-right: 52px; /* Отступ справа */
+  width: 100px; 
+  height: 70px; 
+  margin-left: 39px; 
+  margin-right: 52px; 
 }
 
 .nav-list {
@@ -29,41 +29,41 @@
   margin: 0;
   padding: 0;
   display: flex;
-  width: 622px; /* Размер контейнера для навигационных элементов */
+  width: 622px; 
   height: 60px;
-  align-items: center; /* Центрируем элементы по вертикали */
+  align-items: center; 
 }
 
 .nav-item {
   display: flex;
-  align-items: center; /* Центрируем текст по вертикали */
-  justify-content: center; /* Центрируем текст по горизонтали */
+  align-items: center; 
+  justify-content: center; 
 }
 
 .nav-item-1 {
-  width: 118px; /* Размер для "Статистики" */
+  width: 118px; 
   height: 40px;
 }
 
 .nav-item-2 {
-  width: 134px; /* Размер для "Комментарии" */
+  width: 134px; 
   height: 40px;
 }
 
 .nav-item-3 {
-  width: 139px; /* Размер для "Исследования" */
+  width: 139px; 
   height: 40px;
 }
 
 .nav-item-4 {
-  width: 209px; /* Размер для "Актуальная информация" */
+  width: 209px; 
   height: 40px;
 }
 
 nav a {
-  font-size: 14px; /* Размер шрифта из Figma */
+  font-size: 14px; 
   text-decoration: none;
-  color: #000000; /* Чёрный цвет текста */
+  color: #000000; 
   font-weight: 500;
 }
 
@@ -72,26 +72,25 @@ nav a:hover {
 }
 
 .login-btn {
-  width: 189px; /* Размер кнопки */
+  width: 189px; 
   height: 52px;
-  background-color: #000000; /* Чёрный фон кнопки */
-  color: #ffffff; /* Белый цвет текста */
+  background-color: #000000; 
+  color: #ffffff; 
   border: none;
-  border-radius: 9px; /* Скругление углов 9px */
+  border-radius: 12px; 
   cursor: pointer;
   display: flex;
-  align-items: center; /* Центрируем текст по вертикали */
-  justify-content: center; /* Центрируем текст по горизонтали */
+  align-items: center; 
+  justify-content: center; 
 }
 
 .login-btn:hover {
-  background-color: #333333; /* Чёрный фон кнопки */
+  background-color: #333333; 
 }
 
-/* Стили для текста внутри кнопки */
 .login-btn span {
-  width: 109px; /* Размер текста */
+  width: 109px; 
   height: 24px;
-  font-size: 16px; /* Размер шрифта (изменено тобой) */
-  line-height: 24px; /* Выравниваем текст по высоте */
+  font-size: 16px;
+  line-height: 24px; 
 }

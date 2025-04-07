@@ -16,15 +16,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <HeroSection />
-      <MissionSection />
-      <ResearchSection />
-      <ProblemSection />
-      <StatisticSection /> 
-      <ActualSection />
+      <HeroSection id="hero" />
+      <MissionSection id="mission" /> 
+      <ResearchSection id="research" />
+      <ProblemSection id="problems" />
+      <StatisticSection id="statistics" /> 
+      <ActualSection id="actual" />
       <ConclusionSection />
       <FaqSection />
-      <FormSection />
+      <FormSection id="form" /> 
       <FooterSection />
     </div>
   );

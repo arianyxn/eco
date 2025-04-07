@@ -1,108 +1,108 @@
 .problem-section {
     width: 100%;
-    height: 1138px; /* Высота секции: 946px (контейнер) + 96px (отступ сверху) + 96px (отступ снизу) */
+    height: 1138px; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 96px 0; /* Отступы сверху и снизу по 96px */
-    box-sizing: border-box; /* Учитываем padding в общей высоте */
+    padding: 96px 0; 
+    box-sizing: border-box; 
   }
   
   .problem-container {
-    width: 1080px; /* Ширина контейнера */
-    height: 946px; /* Высота контейнера */
-    margin: 0 auto; /* Центрируем контейнер */
-    position: relative; /* Для позиционирования дочерних элементов */
+    width: 1080px; 
+    height: 946px; 
+    margin: 0 auto; 
+    position: relative; 
   }
   
   .title-wrapper {
-    display: flex; /* Flex для выравнивания изображения и текста */
-    align-items: center; /* Центрируем по вертикали */
+    display: flex;
+    align-items: center; 
     position: absolute;
-    top: 0; /* Привязываем к верхнему краю контейнера */
-    left: 0; /* Привязываем к левому краю контейнера */
+    top: 0; 
+    left: 0; 
   }
   
   .clever-icon {
-    width: 24px; /* Размер изображения, как у big-star */
+    width: 24px; 
     height: 24px;
-    margin-right: 10px; /* Отступ справа от изображения до текста */
+    margin-right: 10px;
   }
   
   .problems-title {
-    font-size: 14px; /* Размер шрифта, как у research-title */
-    font-weight: 500; /* Medium */
-    color: #000000; /* Чёрный цвет текста */
-    margin: 0; /* Убираем стандартные отступы */
+    font-size: 14px; 
+    font-weight: 500; 
+    color: #000000; 
+    margin: 0; 
   }
   
   .problem-title {
-    font-size: 39px; /* Размер шрифта, как в ResearchSection */
-    font-weight: 500; /* Medium */
-    color: #000000; /* Чёрный цвет текста */
-    margin: 0; /* Убираем стандартные отступы */
+    font-size: 39px;
+    font-weight: 500; 
+    color: #000000;
+    margin: 0; 
     position: absolute;
-    top: 43px; /* 24px (высота title-wrapper) + 19px (отступ) */
-    left: 0; /* Привязываем к левому краю */
-    width: 720px; /* Ширина заголовка, как в ResearchSection */
-    text-align: left; /* Текст выравнивается по левому краю */
+    top: 43px; 
+    left: 0; 
+    width: 720px; 
+    text-align: left; 
   }
   
   .problem-description {
-    font-size: 16px; /* Размер шрифта, как в ResearchSection */
-    font-weight: 400; /* Regular */
-    color: #000000; /* Чёрный цвет текста */
-    margin: 0; /* Убираем стандартные отступы */
+    font-size: 16px; 
+    font-weight: 400;
+    color: #000000;
+    margin: 0; 
     position: absolute;
-    top: 108px; /* 91px (нижний край заголовка) + 17px (отступ) */
-    left: 0; /* Привязываем к левому краю */
-    width: 579px; /* Ширина текста, как в ResearchSection */
-    height: 68px; /* Высота текста, как в ResearchSection */
-    line-height: 1.5; /* Межстрочный интервал, как в ResearchSection */
-    text-align: left; /* Текст выравнивается по левому краю */
+    top: 108px; 
+    left: 0; 
+    width: 579px; 
+    height: 68px; 
+    line-height: 1.5; 
+    text-align: left; 
   }
   
   .problems-container {
     position: absolute;
-    top: 221px; /* 176px (занятая высота) + 45px (отступ) */
+    top: 221px; 
     left: 0;
-    width: 1080px; /* Ширина контейнера */
-    height: 725px; /* Оставшаяся высота */
+    width: 1080px; 
+    height: 725px; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем содержимое */
-    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; 
+    justify-content: space-between; 
   }
   
   .problem-card-wrapper {
     width: 100%;
-    height: 567px; /* Высота карточки */
+    height: 567px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .problem-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон для читаемости */
-    border-radius: 12px; /* Закругление углов */
-    width: 605px; /* Ширина карточки */
-    height: 567px; /* Высота карточки */
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 12px; 
+    width: 605px; 
+    height: 567px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Выравниваем содержимое сверху */
   }
   
   .problem-card-inner {
-    padding: 40px 20px 20px 20px; /* Увеличиваем отступ сверху до 40px */
+    padding: 40px 20px 20px 20px; 
     flex-grow: 1; /* Занимает всё доступное пространство */
     position: relative; /* Для позиционирования .more-info */
   }
   
   .problem-card-title {
-    font-size: 24px; /* Размер шрифта (уже увеличен) */
-    font-weight: 500; /* Medium, как в ResearchSection */
-    color: #000000; /* Чёрный цвет, как в ResearchSection */
-    margin: 0 0 30px 0; /* Увеличиваем отступ снизу до 30px */
+    font-size: 24px; 
+    font-weight: 500; 
+    color: #000000; 
+    margin: 0 0 30px 0; 
   }
   
   .problem-card-points {
@@ -112,27 +112,27 @@
   }
   
   .problem-card-points li {
-    font-size: 16px; /* Размер шрифта (уже увеличен) */
-    font-weight: 400; /* Regular, как в ResearchSection */
-    color: #333333; /* Тёмно-серый цвет, как в ResearchSection */
+    font-size: 16px; 
+    font-weight: 400;
+    color: #333333; 
     margin-bottom: 10px; /* Отступ между подпунктами */
-    line-height: 1.4; /* Межстрочный интервал, как в ResearchSection */
+    line-height: 1.4; 
   }
   
   .location-highlight {
-    font-weight: 700; /* Жирный шрифт */
-    color: #2E5A2E; /* Тёмно-зелёный цвет */
+    font-weight: 700; 
+    color: #2E5A2E; 
   }
   
   .more-info {
     position: absolute;
-    bottom: 20px; /* Отступ от нижнего края карточки */
-    right: 20px; /* Отступ от правого края карточки */
+    bottom: 20px; 
+    right: 20px; 
     display: flex;
     align-items: center;
     font-size: 14px;
     font-weight: 400;
-    color: #666666; /* Сероватый, неяркий цвет */
+    color: #666666; 
   }
   
   .more-info .arrow {
@@ -141,10 +141,10 @@
   }
   
   .arrow-button {
-    background-color: #EAF0DD; /* Цвет кнопок */
-    color: #000000; /* Чёрный цвет текста для контраста */
+    background-color: #EAF0DD; 
+    color: #000000;
     border: none;
-    border-radius: 50%; /* Круглая форма */
+    border-radius: 50%; 
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -156,13 +156,13 @@
   }
   
   .arrow-button:hover {
-    background-color: #D5E0C8; /* Чуть темнее при наведении */
+    background-color: #D5E0C8; 
   }
   
   .arrow-up {
-    margin-bottom: 20px; /* Отступ снизу */
+    margin-bottom: 20px; 
   }
   
   .arrow-down {
-    margin-top: 20px; /* Отступ сверху */
+    margin-top: 20px; 
   }

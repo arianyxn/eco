@@ -1,11 +1,29 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion'; // Импортируем framer-motion
+import { motion, AnimatePresence } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './ProblemSection.css';
-import problemBackground from '../../assets/ProblemSection.jpg'; // Импортируем фоновое изображение
-import cleverIcon from '../../assets/clever.png'; // Импортируем изображение clever.png
+import problemBackground from '../../assets/ProblemSection.jpg';
+import cleverIcon from '../../assets/clever.png';
 
-const ProblemSection = () => {
-  // Данные для карточек (6 проблем с подпунктами)
+const ProblemSection = ({ id }) => {
+  // Хук для отслеживания видимости секции
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  // Варианты анимации для появления слева (для остальных элементов)
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  };
+
+  // Состояние для текущей карточки
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // Состояние для направления переключения (вверх или вниз)
+  const [direction, setDirection] = useState('down'); // По умолчанию вниз
+
+  // Данные для карточек
   const problems = [
     {
       title: 'Загрязнение воздуха',
@@ -57,45 +75,93 @@ const ProblemSection = () => {
     },
   ];
 
-  // Состояние для текущей карточки
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Функции для переключения карточек
+  // Функции для переключения карточек с учётом направления
   const handleNext = () => {
+    setDirection('down'); 
     setCurrentIndex((prevIndex) => (prevIndex + 1) % problems.length);
   };
 
   const handlePrev = () => {
+    setDirection('up'); 
     setCurrentIndex((prevIndex) => (prevIndex - 1 + problems.length) % problems.length);
   };
 
-  // Анимация для карточек
+  // Анимация для карточек с учётом направления
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.5 } },
+    hidden: (direction) => ({
+      opacity: 0,
+      y: direction === 'down' ? 50 : -50, 
+    }),
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut' },
+    },
+    exit: (direction) => ({
+      opacity: 0,
+      y: direction === 'down' ? -50 : 50, 
+      transition: { duration: 0.5, ease: 'easeOut' },
+    }),
   };
 
   return (
-    <section className="problem-section" style={{ backgroundImage: `url(${problemBackground})` }}>
+    <section
+      id={id}
+      className="problem-section"
+      style={{ backgroundImage: `url(${problemBackground})` }}
+      ref={ref}
+    >
       <div className="problem-container">
-        <div className="title-wrapper">
+        <motion.div
+          className="title-wrapper"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+        >
           <img src={cleverIcon} alt="Clever Icon" className="clever-icon" />
           <h3 className="problems-title">Проблемы</h3>
-        </div>
-        <h2 className="problem-title">Масштабные проблемы</h2>
-        <p className="problem-description">
+        </motion.div>
+        <motion.h2
+          className="problem-title"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+          transition={{ delay: 0.2 }}
+        >
+          Масштабные проблемы
+        </motion.h2>
+        <motion.p
+          className="problem-description"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+          transition={{ delay: 0.4 }}
+        >
           Важно помнить, что проблемы экологии — это не только проблемы отдельных стран, но и мировой вызов, который требует коллективных усилий для сокращения загрязнения, сохранения природы и борьбы с последствиями изменения климата.
-        </p>
-        <div className="problems-container">
-          <button className="arrow-button arrow-up" onClick={handlePrev}>
+        </motion.p>
+        <motion.div
+          className="problems-container"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+          transition={{ delay: 0.6 }}
+        >
+          <motion.button
+            className="arrow-button arrow-up"
+            onClick={handlePrev}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={slideInLeft}
+            transition={{ delay: 0.8 }}
+          >
             ↑
-          </button>
+          </motion.button>
           <div className="problem-card-wrapper">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={currentIndex}
                 className="problem-card"
+                custom={direction} // Передаём направление для анимации
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
@@ -105,7 +171,7 @@ const ProblemSection = () => {
                   <h3 className="problem-card-title">{problems[currentIndex].title}</h3>
                   <ul className="problem-card-points">
                     {problems[currentIndex].points.map((point, index) => {
-                      const [location, description] = point.split(': '); // Разделяем строку на две части по двоеточию
+                      const [location, description] = point.split(': ');
                       return (
                         <li key={index}>
                           <span className="location-highlight">{location}:</span> {description}
@@ -121,10 +187,17 @@ const ProblemSection = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-          <button className="arrow-button arrow-down" onClick={handleNext}>
+          <motion.button
+            className="arrow-button arrow-down"
+            onClick={handleNext}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={slideInLeft}
+            transition={{ delay: 1.0 }}
+          >
             ↓
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,9 +1,9 @@
 .App {
   font-family: Arial, sans-serif;
-  min-height: 100vh; /* Минимальная высота на всю страницу */
-  background-image: url('./assets/Container.jpg'); /* Путь к изображению */
-  background-size: cover; /* Изображение растягивается, чтобы покрыть всю область */
-  background-position: center; /* Центрируем изображение */
-  background-repeat: no-repeat; /* Изображение не повторяется */
-  padding-top: 92px; /* Отступ сверху, равный высоте шапки (72px + 10px + 10px) */
+  min-height: 100vh; 
+  background-image: url('./assets/Container.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  padding-top: 92px; 
 }

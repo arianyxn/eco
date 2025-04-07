@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './FaqSection.css';
-import { motion, AnimatePresence } from 'framer-motion'; // Импортируем framer-motion
-import faqBackground from '../../assets/FaqSection.jpg'; // Фон секции
-import faqIcon from '../../assets/faq.png'; // Иконка faq.png
+import { motion, AnimatePresence } from 'framer-motion'; 
+import faqBackground from '../../assets/FaqSection.jpg';
+import faqIcon from '../../assets/faq.png'; 
 
 const FaqSection = () => {
   // Состояние для управления открытием/закрытием вопросов
-  const [openIndex, setOpenIndex] = useState(0); // Первый вопрос открыт по умолчанию
+  const [openIndex, setOpenIndex] = useState(0); //дэфолт значение 
 
-  // Данные для FAQ
   const faqItems = [
     {
       question: 'Что я могу сделать, чтобы помочь экологии?',
@@ -34,7 +33,7 @@ const FaqSection = () => {
 
   // Функция для переключения состояния вопроса
   const toggleQuestion = (index) => {
-    setOpenIndex(openIndex === index ? null : index); // Закрываем, если уже открыт, или открываем новый
+    setOpenIndex(openIndex === index ? null : index); 
   };
 
   return (

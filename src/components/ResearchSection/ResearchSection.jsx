@@ -1,16 +1,34 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // Импортируем framer-motion
-import './ResearchSection.css'; // Обновляем путь к CSS
-import researchBackground from '../../assets/ResearchSection.jpg'; // Оставляем имя файла, так как ты не просила его менять
-import bigStar from '../../assets/bigstar.png'; // Импортируем изображение звезды
-// Импортируем изображения для карточек (замени на свои пути)
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import './ResearchSection.css';
+import researchBackground from '../../assets/ResearchSection.jpg';
+import bigStar from '../../assets/bigstar.png';
 import cardImage1 from '../../assets/card-image1.jpg';
 import cardImage2 from '../../assets/card-image2.jpg';
 import cardImage3 from '../../assets/card-image3.jpg';
 import cardImage4 from '../../assets/card-image4.jpg';
 
-const ResearchSection = () => { // Переименовываем компонент
-  // Данные для карточек
+const ResearchSection = ({ id }) => {
+  // Хук для отслеживания видимости секции
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
+
+  // Варианты анимации для появления слева
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 }, 
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }, 
+  };
+
+  // Варианты анимации для карточек (с добавлением hover-эффекта)
+  const cardVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+    hover: { scale: 1.02, transition: { duration: 0.3 } },
+  };
+
   const cards = [
     {
       category: 'Загрязнение',
@@ -42,33 +60,57 @@ const ResearchSection = () => { // Переименовываем компоне
     },
   ];
 
-  // Анимация для карточек
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    hover: { scale: 1.02, transition: { duration: 0.3 } },
-  };
-
   return (
-    <section className="research-section" style={{ backgroundImage: `url(${researchBackground})` }}>
+    <section
+      id={id}
+      className="research-section"
+      style={{ backgroundImage: `url(${researchBackground})` }}
+      ref={ref}
+    >
       <div className="research-container">
-        <div className="title-wrapper">
+        <motion.div
+          className="title-wrapper"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+        >
           <img src={bigStar} alt="Big Star" className="big-star" />
           <h3 className="research-title">Исследования</h3>
-        </div>
-        <h2 className="research-title-main">Что нам известно?</h2>
-        <p className="research-description">
+        </motion.div>
+        <motion.h2
+          className="research-title-main"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+          transition={{ delay: 0.2 }}
+        >
+          Что нам известно?
+        </motion.h2>
+        <motion.p
+          className="research-description"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+          transition={{ delay: 0.4 }}
+        >
           Для поддержания Земли и борьбы с экологическими проблемами наши исследователи всегда собирают достоверную информацию, тщательно проверяя ее перед публикацией новостей.
-        </p>
-        <div className="research-cards-container">
+        </motion.p>
+        <motion.div
+          className="research-cards-container"
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          variants={slideInLeft}
+          transition={{ delay: 0.6 }}
+        >
           {cards.map((card, index) => (
             <motion.div
               key={index}
               className="research-card"
               variants={cardVariants}
               initial="hidden"
-              animate="visible"
+              animate={inView ? 'visible' : 'hidden'}
               whileHover="hover"
+              transition={{ delay: 0.8 + index * 0.2 }} // Задержка для каждой карточки
             >
               <img src={card.image} alt={card.title} className="research-card-image" />
               <div className="research-card-content">
@@ -78,7 +120,7 @@ const ResearchSection = () => { // Переименовываем компоне
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

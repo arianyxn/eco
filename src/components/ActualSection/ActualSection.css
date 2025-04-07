@@ -1,102 +1,100 @@
 .actual-section {
     width: 100%;
-    height: 1342px; /* Высота секции */
+    height: 1200px; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 96px 0; /* Отступы сверху и снизу по 96px для центрирования контейнера */
-    box-sizing: border-box; /* Учитываем padding в общей высоте */
+    padding: 96px 0; 
+    box-sizing: border-box; 
   }
   
   .actual-container {
-    width: 1080px; /* Ширина контейнера */
-    height: 1150px; /* Высота контейнера */
-    margin: 0 auto; /* Центрируем контейнер по горизонтали */
-    position: relative; /* Для позиционирования дочерних элементов */
+    width: 1080px; 
+    height: 1000px; 
+    margin: 0 auto; 
+    position: relative; 
+    align-items: center;
   }
   
   .actual-sub-container {
-    width: 1080px; /* Ширина всех подконтейнеров */
+    width: 1080px;
+    align-items: center;
   }
   
   .actual-sub-container-1 {
-    height: 157px; /* Высота первого подконтейнера */
-    position: relative; /* Для позиционирования дочерних элементов */
+    height: 100px; 
+    position: relative; 
   }
   
   .actual-sub-container-2 {
-    height: 702px; /* Высота второго подконтейнера */
-    margin-top: 44px; /* Отступ сверху */
+    height: 702px; 
+    /* margin-top: 44px;  */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Для корректного позиционирования */
+    position: relative; 
   }
   
   .actual-sub-container-3 {
-    height: 203px; /* Высота третьего подконтейнера */
-    margin-top: 44px; /* Отступ сверху */
-    display: flex; /* Для центрирования содержимого */
+    height: 203px; 
+    /* margin-top: 44px; */
+    display: flex; 
     justify-content: center;
     align-items: center;
   }
   
   .actual-title-wrapper {
     display: flex; /* Flex для выравнивания изображения и текста */
-    align-items: center; /* Центрируем по вертикали */
+    align-items: center; 
     position: absolute;
-    top: 0; /* Привязываем к верхнему краю контейнера */
-    left: 453px; /* Отступ слева */
-    width: 174px; /* 1080px - 453px (слева) - 453px (справа) */
+    top: 0;
+    left: 453px; 
+    width: 174px; 
   }
   
   .cosmos-icon {
-    width: 24px; /* Размер изображения */
+    width: 24px; 
     height: 24px;
-    margin-right: 10px; /* Отступ справа от изображения до текста */
+    margin-right: 10px;
   }
   
   .actual-title {
-    font-size: 14px; /* Размер шрифта */
-    font-weight: 500; /* Medium */
-    color: #000000; /* Чёрный цвет текста */
-    margin: 0; /* Убираем стандартные отступы */
+    font-size: 14px; 
+    font-weight: 500; 
+    color: #000000; 
+    margin: 0; 
   }
   
   .top-title {
-    font-size: 38px; /* Размер шрифта */
-    font-weight: 500; /* Medium */
-    color: #000000; /* Чёрный цвет */
-    margin: 0; /* Убираем стандартные отступы */
-    position: absolute;
-    top: 40px; /* 24px (высота title-wrapper) + 16px (отступ) */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Смещаем влево на половину ширины */
-    text-align: center; /* Текст выравнивается по центру */
+    font-size: 38px; 
+    font-weight: 500; 
+    color: #000000; 
+    margin: 0; 
+    position: relative;
+    top: 40px; 
+    text-align: center; 
   }
   
   .top-description {
-    font-size: 16px; /* Размер шрифта */
-    font-weight: 400; /* Regular */
-    color: #000000; /* Чёрный цвет текста */
-    margin: 0; /* Убираем стандартные отступы */
-    position: absolute;
-    top: 100px; /* 40px (top заголовка) + 44px (высота заголовка) + 16px (отступ) */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translateX(-50%); /* Смещаем влево на половину ширины */
-    width: 640px; /* Указанная ширина */
-    height: 48px; /* Указанная высота */
-    text-align: center; /* Текст выравнивается по центру */
-    line-height: 1.5; /* Межстрочный интервал */
+    font-size: 16px; 
+    font-weight: 400;
+    color: #000000; 
+    margin: 0; 
+    position: relative;
+    top: 70px; 
+    width: 1080px; 
+    height: 48px;
+    text-align: center;
+    line-height: 1.5; 
   }
   
   /* Стили для слайдера */
   .image-slider {
-    width: 1000px; /* Ширина слайдера */
-    height: 600px; /* Высота слайдера */
+    width: 1000px; 
+    height: 600px; 
     position: relative;
-    perspective: 1000px; /* Добавляем перспективу для 3D-эффекта */
-    display: flex; /* Для центрирования содержимого */
+    perspective: 1000px; /* перспектива для 3D-эффекта */
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -112,34 +110,34 @@
   }
   
   .card {
-    width: 600px; /* Увеличиваем ширину карточки */
-    height: 400px; /* Уменьшаем высоту карточки */
+    width: 600px; 
+    height: 400px;
     position: absolute;
     transition: transform 0.5s ease, opacity 0.5s ease; /* Плавная анимация */
-    box-shadow: none; /* Убедимся, что тени нет */
+    box-shadow: none; 
     padding: 0;
-    border-radius: 20px; /* Твоё изменение */
+    border-radius: 20px; 
   }
   
   .card-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Изображение заполняет карточку */
-    border-radius: 20px; /* Твоё изменение */
-    display: block; /* Убираем возможные пробелы под изображением */
-    border: none; /* Убедимся, что нет рамки */
+    object-fit: cover; 
+    border-radius: 20px; 
+    display: block; 
+    border: none; 
   }
   
   .card.center .card-image {
-    border: none; /* Убедимся, что рамки нет */
+    border: none; 
   }
   
   .card-content {
     position: absolute;
-    bottom: 30px; /* Отступ снизу */
+    bottom: 30px; 
     left: 20px;
-    color: #ffffff; /* Белый цвет текста */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень для читаемости */
+    color: #ffffff; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
   }
   
   .card-title {
@@ -158,10 +156,10 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-    color: #ffffff; /* Белый цвет стрелок */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #ffffff; 
     border: none;
-    border-radius: 50%; /* Круглые кнопки */
+    border-radius: 50%; 
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -174,7 +172,7 @@
   }
   
   .slider-button:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Темнее при наведении */
+    background-color: rgba(0, 0, 0, 0.8); 
   }
   
   .slider-button.prev {
@@ -187,42 +185,42 @@
   
   /* Стили для третьего подконтейнера */
   .sub-container-3-content {
-    width: 640px; /* Ширина div */
-    height: 203px; /* Высота div */
-    display: flex; /* Для вертикального расположения элементов */
-    flex-direction: column; /* Элементы в столбец */
-    align-items: center; /* Центрируем по горизонтали */
-    justify-content: center; /* Центрируем по вертикали */
-    background-color: rgba(240, 255, 209, 0.8); /* #F0FFD1 с прозрачностью для эффекта размытия */
-    border-radius: 10px; /* Скругление углов */
+    width: 640px;
+    height: 203px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: rgba(240, 255, 209, 0.8); 
+    border-radius: 10px;
     backdrop-filter: blur(10px); /* Эффект размытия фона */
     -webkit-backdrop-filter: blur(10px); /* Для поддержки в старых браузерах */
   }
   
   .sub-container-3-title {
-    font-size: 29px; /* Размер шрифта */
-    font-weight: 500; /* Medium */
-    color: #000000; /* Чёрный цвет */
-    margin: 30px 0; /* Отступы 30px сверху и снизу */
-    text-align: center; /* Центрируем текст */
+    font-size: 29px; 
+    font-weight: 500;
+    color: #000000; 
+    /* margin: 30px 0;  */
+    text-align: center; 
   }
   
   .sub-container-3-subtitle {
-    font-size: 16px; /* Размер шрифта */
-    font-weight: 500; /* Medium */
-    color: #000000; /* Чёрный цвет */
-    margin: 0 0 16px 0; /* Отступ 16px снизу */
-    text-align: center; /* Центрируем текст */
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000; 
+    margin: 0 0 20px 0; 
+    text-align: center; 
   }
   
   .sub-container-3-button {
-    padding: 12px 24px; /* Отступы внутри кнопки */
-    font-size: 16px; /* Размер шрифта */
-    font-weight: 500; /* Medium */
-    color: #ffffff; /* Белый цвет текста */
-    background-color: #000000; /* Чёрный фон */
+    padding: 12px 24px;
+    font-size: 16px; 
+    font-weight: 500; 
+    color: #ffffff; 
+    background-color: #000000; 
     border: none;
-    border-radius: 5px; /* Скругление углов */
+    border-radius: 10px; 
     cursor: pointer;
     transition: background-color 0.3s ease; /* Плавный переход при наведении */
   }

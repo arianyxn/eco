@@ -1,102 +1,102 @@
 .form-section {
     width: 100%;
-    height: 645px; /* Высота секции */
+    height: 645px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 96px 0; /* Отступы сверху и снизу по 96px */
-    box-sizing: border-box; /* Учитываем padding в общей высоте */
+    padding: 96px 0; 
+    box-sizing: border-box; 
   }
   
   .form-main-container {
-    width: 1080px; /* Ширина контейнера */
-    height: 453px; /* Высота контейнера: 645px - 192px (96px сверху + 96px снизу) */
-    margin: 0 auto; /* Центрируем контейнер */
-    display: flex; /* Для размещения элементов */
-    flex-direction: column; /* Элементы располагаются друг под другом */
-    align-items: center; /* Центрируем по горизонтали */
+    width: 1080px; 
+    height: 453px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
   }
   
   .form-heading-title {
-    font-size: 39px; /* Размер шрифта */
-    font-weight: 500; /* Medium */
-    color: #000000; /* Чёрный цвет текста */
-    margin: 0; /* Убираем стандартные отступы */
-    text-align: center; /* Текст выравнивается по центру */
+    font-size: 39px; 
+    font-weight: 500; 
+    color: #000000; 
+    margin: 0; 
+    text-align: center; 
   }
   
   .form-content-wrapper {
-    width: 100%; /* Ширина на весь контейнер */
-    margin-top: 50px; /* Отступ 50px после заголовка */
-    display: flex; /* Для размещения подзаголовка и формы в ряд */
-    justify-content: center; /* Центрируем содержимое */
-    gap: 80px; /* Уменьшаем расстояние между подзаголовком и формой */
+    width: 100%; 
+    margin-top: 50px; 
+    display: flex; 
+    /* justify-content: center;  */
+    gap: 150px; 
   }
   
   .form-subheading {
-    width: 440px; /* Ширина подзаголовка */
-    height: 192px; /* Высота подзаголовка */
+    width: 440px; 
+    height: 192px; 
     display: flex;
     align-items: flex-start; /* Выравниваем текст по верхнему краю */
-    margin-top: 60px; /* Смещаем подзаголовок вниз, чтобы он был немного выше центра */
+    margin-top: 44px; 
   }
   
   .form-subheading p {
-    font-size: 16px; /* Размер шрифта */
-    font-weight: 400; /* Regular */
-    color: #000000; /* Чёрный цвет текста */
-    margin: 0; /* Убираем стандартные отступы */
-    line-height: 1.5; /* Межстрочный интервал для читаемости */
+    font-size: 18px;
+    font-weight: 400; 
+    color: #000000; 
+    margin: 0;
+    line-height: 2; 
   }
   
   .form-input-section {
-    width: 400px; /* Ширина секции формы */
-    height: 333px; /* Высота секции формы */
-    background-color: #ffffff; /* Белый фон */
-    border-radius: 12px; /* Скруглённые углы */
+    width: 400px; 
+    height: 333px; 
+    background-color: #ffffff; 
+    border-radius: 12px; 
     display: flex;
-    justify-content: center; /* Центрируем форму */
-    align-items: center; /* Центрируем форму */
+    justify-content: center; 
+    align-items: center; 
   }
   
   .form-input-form {
-    width: 100%; /* Форма занимает всю ширину секции */
+    width: 100%; 
     display: flex;
-    flex-direction: column; /* Поля и кнопка располагаются друг под другом */
-    gap: 20px; /* Отступы между полями и кнопкой */
-    padding: 20px; /* Внутренние отступы для формы */
-    box-sizing: border-box; /* Учитываем padding в размерах */
+    flex-direction: column; 
+    gap: 20px; 
+    padding: 20px; 
+    box-sizing: border-box; 
   }
   
   .form-input {
-    width: 100%; /* Поля на всю ширину формы */
-    height: 50px; /* Высота поля */
-    padding: 0 15px; /* Отступы внутри поля */
-    font-size: 16px; /* Размер шрифта */
-    font-weight: 400; /* Regular */
-    color: #000000; /* Чёрный цвет текста */
-    border: 1px solid #999999; /* Серый бордер */
-    border-radius: 5px; /* Закругление углов */
-    box-sizing: border-box; /* Учитываем padding и border в размерах */
+    width: 100%; 
+    height: 50px; 
+    padding: 0 15px; 
+    font-size: 16px; 
+    font-weight: 400; 
+    color: #000000;
+    border: 1px solid #999999; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
   }
   
   .form-input::placeholder {
-    color: #999999; /* Серый цвет для placeholder */
+    color: #999999; 
   }
   
   .form-submit-button {
-    width: 100%; /* Кнопка на всю ширину формы */
-    height: 50px; /* Высота кнопки */
-    background-color: #000000; /* Чёрный цвет кнопки */
-    color: #ffffff; /* Белый цвет текста */
-    font-size: 16px; /* Размер шрифта */
-    font-weight: 500; /* Medium */
-    border: none; /* Убираем границу */
-    border-radius: 5px; /* Закругление углов */
-    cursor: pointer; /* Курсор указывает на кликабельность */
-    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+    width: 100%; 
+    height: 50px; 
+    background-color: #000000; 
+    color: #ffffff; 
+    font-size: 16px;
+    font-weight: 500; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
   }
   
   .form-submit-button:hover {
-    background-color: #333333; /* Тёмно-серый цвет при наведении */
+    background-color: #333333;
   }
